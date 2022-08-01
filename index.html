@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="theme-color" content="purple">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>music app</title>
+</head>
+<body onload="songList()">
+    <div class="container" id="container">
+        <!-- screen-1(song list home screen) -->
+        <div class="inner-container" id="inner-container">
+            <header>
+                <input type="search" value="" name="" id="Search-song" placeholder="Search local songs" onkeyup="searchSong(this.value)">
+                <div class="search_result" id="search_result"></div>
+            </header>
+            <div class="music-list" id="music-list"></div> 
+        </div>    
+
+        <!-- screen-2(play song home screen)  -->
+        <div class="play-screen" id="play-screen">
+            <header>
+                <img src="icons/like.png" title="like" onclick="liked()" id="like" height=25>
+                <div class="close-play-screen-icon" title="Close" onclick="close_play_screen()">
+                    <img src="icons/playlist.png" title="songs list" height=25 id="" onclick="open_play_screen()" >
+                </div>
+            </header>
+            <section class="top-section">
+                <img src="icons/musical-note.png">
+            </section>
+            <section class="bottom-section">
+                <label id="songName1"></label>
+                <div class="control-section">
+                    <img src="icons/back-button.png" height="30px" onclick="prevSong()">
+                    <img src="icons/play.png" height=35 id="play_pause1" onclick="playPauseSong()">
+                    <img src="icons/next-button.png" height="30px" onclick="nextSong()">
+                </div>
+            </section>
+        </div>
+
+        <div class="footer" id="footer">
+            <div class="controls">
+                <img src="icons/play.png" height=50 id="play_pause" onclick="playPauseSong()">
+                <label id="songName2"></label>
+                <img src="icons/arrow-up.png" title="Music" height=25 id="top-arrow" onclick="open_play_screen()" >
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
+
+
+
+
